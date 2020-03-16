@@ -15,6 +15,7 @@ public class IntroToGenerics {
 		//Here we are calling calcStuff and passing in a String
 		i.calcStuff(s, 5);
 		
+		
 		Random r = new Random();
 		//Here we are calling calcStuff and passing in a Random object
 		i.calcStuff(r, 6);
@@ -39,6 +40,7 @@ public class IntroToGenerics {
 //Here a class is created that has a generic called AotherTemplate
 //Class generics must be a class, not a primitive data type: int, float, double, boolean, long, short, byte
 class SomeClass<AnotherTemplate>{
+	
 	//Here the t variable can be any object type
 	AnotherTemplate t;
 	
