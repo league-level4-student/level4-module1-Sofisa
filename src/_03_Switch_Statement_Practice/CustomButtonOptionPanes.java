@@ -13,5 +13,30 @@ public class CustomButtonOptionPanes {
 		
 		//use a switch statement to do something cool for each option
 		
+		//switch statement
+		switch(choice) {
+		case "Sunday":
+			JOptionPane.showMessageDialog(null, "Enjoy this last day of the week. Make pancakes!");
+			break;
+		case "Monday":
+			JOptionPane.showMessageDialog(null, "The worst day of the week!");
+			break;
+		case "Tuesday":
+			JOptionPane.showMessageDialog(null, "I hope you had fun on Monday :)");
+			break;
+		case "Wednesday":
+			JOptionPane.showMessageDialog(null, "It's humpday!");
+			break;
+		case "Thursday":
+			JOptionPane.showMessageDialog(null, "It's almost Friday");
+			break;
+		case "Friday":
+			JOptionPane.showMessageDialog(null, "Woohoo!!");
+			break;
+		case "Saturday":
+			JOptionPane.showMessageDialog(null, "Best day of the Week!");
+		}
 	}
+	
+	
 }

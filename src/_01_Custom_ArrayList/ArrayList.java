@@ -3,9 +3,14 @@ package _01_Custom_ArrayList;
 @SuppressWarnings("unchecked")
 
 public class ArrayList <T>{
+	T value;
+	
+
 	
 	public ArrayList() {
+		
 	}
+	
 	
 	public T get(int loc) throws IndexOutOfBoundsException {
 		
@@ -13,6 +18,8 @@ public class ArrayList <T>{
 	}
 	
 	public void add(T val) {
+	
+		
 		
 	}
 	

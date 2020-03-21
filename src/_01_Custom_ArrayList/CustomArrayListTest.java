@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 //Complete the ArrayList class using the generic to make the tests pass.
 
 public class CustomArrayListTest {
-
+	
 	@Test
 	public void testAddAndGet() {
 		ArrayList<Integer> list = new ArrayList<Integer>();
