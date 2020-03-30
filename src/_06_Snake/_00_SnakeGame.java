@@ -129,6 +129,7 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 			break;
 		case KeyEvent.VK_SPACE:
 			snake.feed();
+			
 		}
 		// if an arrow key is pressed, set the snake's 
 		// direction accordingly
@@ -156,10 +157,18 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		//2. tell the user their snake is dead
 		JOptionPane.showMessageDialog(null, "Your snake is dead! :(");
 		//3. ask them if they want to play again.
-		JOptionPane.showMessageDialog(null, "Do you want to play again?");
+		String question = JOptionPane.showInputDialog("Do you want to play again?");
 		//4. if they want to play again
 		//   reset the snake and the food and start the timer
 		//   else, exit the game
+		if (question == "Yes") {
+			timer.restart();
+			setFoodLocation();
+			snake = new Snake(new Location(WIDTH / 2, HEIGHT / 2));
+			
+		}else {
+			System.exit(0);
+		}
 		
 	}
 
@@ -174,10 +183,17 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		snake.update();
 		//2. if the snake is colliding with its own body 
 		//   or if the snake is out of bounds, call gameOver
+		if (snake.isHeadCollidingWithBody() == true || snake.isOutOfBounds() == true) {
+			gameOver();
+			
+		}
 		
 		//3. if the location of the head is equal to the location of the food,
 		// 	 feed the snake and set the food location
-		
+		if (snake.getHeadLocation() == foodLocation) {
+			snake.feed();
+			setFoodLocation();
+		}
 		//4. call panel.repaint();
 		panel.repaint();
 	}
